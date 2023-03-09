@@ -14,6 +14,10 @@ hooks:
     - location: scripts/install-deps.sh
       timeout: 300
       runas: ec2-user
+  AfterInstall:
+    - location: scripts/build.sh
+      timeout: 300
+      runas: ec2-user
   ApplicationStart:
     - location: scripts/start.sh
       timeout: 300
